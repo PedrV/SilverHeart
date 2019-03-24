@@ -6,6 +6,7 @@ from email.mime.text import MIMEText
 
 class emailSender:
     def Email():
+
         try:
             user = 'origin@gmail.com'
             to = "destination@company.com"
@@ -30,7 +31,7 @@ class emailSender:
             msg.attach( part )
 
             server = smtplib.SMTP_SSL( 'smtp.company.com',
-                                       'ConnectionPort (465 - gmail)' )  # using smtplib.SMTP_SSL instead to ensure secure connection
+                                       'ConnectionPort (465 for gmail)' )  # using smtplib.SMTP_SSL instead to ensure secure connection
             # server.ehlo() <- command to create a insecure connection
             # server.starttls() <- make the connection secure (Google doesn't support this method)
 
