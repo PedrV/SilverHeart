@@ -7,7 +7,6 @@ from email.mime.text import MIMEText
 class emailSender:
     def Email():
         try:
-
             user = 'origin@gmail.com'
             to = "destination@company.com"
             passwOrd = "plainTXT"
