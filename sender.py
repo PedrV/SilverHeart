@@ -4,7 +4,6 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-
 class emailSender:
     def Email():
         try:
@@ -47,6 +46,5 @@ class emailSender:
             print( 'Server refused' )
         else:
             print( "Job done" )
-
 
 emailSender.Email()
