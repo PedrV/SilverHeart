@@ -4,13 +4,14 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
 class emailSender:
     def Email():
 
         try:
-            user = 'origin@gmail.com'
+            user = 'origin@company.com'
             to = "destination@company.com"
-            passwOrd = "plainTXT"
+            pswrd = "PainText"
 
             msg = MIMEMultipart()
 
@@ -20,8 +21,8 @@ class emailSender:
             body = 'Hey, what up'
 
             msg.attach( MIMEText( body, "plain" ) )
-            filename = "Key.txt"
-            attachment = open( 'C:\\Users\\File.log', "rb" )
+            filename = "Filename.txt"
+            attachment = open( 'C:\\Users\\User\\Documents\\Filename.log', "rb" )
 
             part = MIMEBase( "application", "octet-stream" )
             part.set_payload( (attachment).read() )
@@ -31,11 +32,11 @@ class emailSender:
             msg.attach( part )
 
             server = smtplib.SMTP_SSL( 'smtp.company.com',
-                                       'ConnectionPort (465 for gmail)' )  # using smtplib.SMTP_SSL instead to ensure secure connection
+                                       'company-port' )  # using smtplib.SMTP_SSL instead to ensure secure connection
             # server.ehlo() <- command to create a insecure connection
             # server.starttls() <- make the connection secure (Google doesn't support this method)
 
-            server.login( user, passwOrd )
+            server.login( user, pswrd )
             Text = msg.as_string()
             server.sendmail( user, to, Text )
             server.quit()
@@ -46,5 +47,6 @@ class emailSender:
             print( 'Server refused' )
         else:
             print( "Job done" )
+
 
 emailSender.Email()

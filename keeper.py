@@ -7,9 +7,8 @@ import win32con
 
 # ------------------------------------ #
 def log_info(msg):
-    """ Prints """
     print( msg )
-    f = open( 'C:\\Users\\Log.log', "a" )
+    f = open( 'C:\\Users\\User\\Documents\\Filename.log', "a" )
     f.write( msg + "\n" )
     f.close()
 
@@ -19,7 +18,12 @@ def log_info(msg):
 # Reads the messages from the message map and prints
 def wndproc(hwnd, msg, wparam, lparam):
     log_info( '%s' % msg )
-
+    ctrl = msg
+    #Sends email on End of Session
+    if ctrl == 17:
+        pass
+    else:
+        pass
 
 # ---------------------------------- #
 
