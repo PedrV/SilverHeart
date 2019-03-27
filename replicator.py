@@ -47,7 +47,7 @@ except OSError as E:
 # Try stock access rights with 64bits program to 64bit registry
 try:
     key = OpenKey( HKEY_CURRENT_USER, path, 0, access=KEY_SET_VALUE )
-    SetValue( key, 'Registry', REG_SZ, filePath )  # Registry = name of the sub_key to open
+    SetValue( key, 'Registry', REG_SZ, filePath )  # Registry == name of the sub_key to open
     CloseKey( key )
 except FileNotFoundError:
     import platform
@@ -67,3 +67,4 @@ except FileNotFoundError:
         CloseKey( key )
     except Exception as e:
         print( 'Excepetion: %s' % str( e ) )
+        
