@@ -34,7 +34,7 @@ def wndproc(hwnd, msg, wparam, lparam):
 
 # ----------------------------------- #
 
-# Creates invisible console (window) that detects commands
+# Creates invisible console that detects commands
 
 log_info( "*** STARTING WND ***" )
 hinst = win32api.GetModuleHandle( None )
