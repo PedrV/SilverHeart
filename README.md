@@ -1,5 +1,5 @@
-# KeyLogger_Concept
-Python KeyLogger script
+# SilverHeart
+A fully developed software in [Python 3.7.3](https://www.python.org/), *SilverHeart* is a KeyLogger concept, that can be deployed in Windows, Mac OS and Linux distributions.
 
 
 # Dependencies
