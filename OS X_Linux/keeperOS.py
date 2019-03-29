@@ -5,10 +5,11 @@ import signal
 stop = False
 
 
-#When SIGTERM ( terminate the process in a soft way ) is detected activates the handler and sends the email
+# When SIGTERM ( terminate the process in a soft way ) is detected activates the handler and sends the email
 def signal_catcher(signal,frame):
     global stop
     stop = True
+    import sender
     # log.write("Signal Incoming...")
     # log.write("Signal Caught: %s" %str(signal))
     # log.flush()
