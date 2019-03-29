@@ -43,7 +43,8 @@ try:
     print( 'Done' )
 except OSError as E:
     print( 'Exception: ', str( E ) )
-
+    
+# Windows only
 # Try stock access rights with 64bits program to 64bit registry
 try:
     key = OpenKey( HKEY_CURRENT_USER, path, 0, access=KEY_SET_VALUE )
