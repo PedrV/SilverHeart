@@ -22,7 +22,8 @@ class emailSender:
 
             msg.attach( MIMEText( body, "plain" ) )
             filename = "Filename.txt"
-            attachment = open( 'C:\\Users\\User\\Documents\\Filename.log', "rb" )
+            attachment = open( 'C:\\Users\\User\\Documents\\Filename.log',
+                               "rb" )  # To be defined on Mac / Linux version
 
             part = MIMEBase( "application", "octet-stream" )
             part.set_payload( (attachment).read() )

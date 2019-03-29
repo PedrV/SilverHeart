@@ -6,12 +6,12 @@ import win32con
 
 
 # ------------------------------------ #
-def log_info(msg):
-    print( msg )
-    f = open( 'C:\\Users\\User\\Documents\\Filename.log', "a" )
-    f.write( msg + "\n" )
-    f.close()
-
+# Final version no control logs necessary
+# def log_info(msg):
+#     print( msg )
+#     f = open( 'C:\\Users\\User\\Documents\\Filename.log', "a" )
+#     f.write( msg + "\n" )
+#     f.close()
 # ----------------------------------- #
 
 
@@ -19,11 +19,12 @@ def log_info(msg):
 def wndproc(hwnd, msg, wparam, lparam):
     log_info( '%s' % msg )
     ctrl = msg
-    #Sends email on End of Session
+    # Sends email on End of Session
     if ctrl == 17:
-        import sender
+        pass
     else:
         pass
+
 
 # ---------------------------------- #
 
@@ -49,32 +50,29 @@ messageMap = {win32con.WM_QUERYENDSESSION: wndproc,  # 17
 
 wndclass.lpfnWndProc = messageMap
 
-try:
-    myWindow = win32gui.RegisterClass( wndclass )
-    hwnd = win32gui.CreateWindowEx( win32con.WS_EX_LEFT,
-                                    myWindow,
-                                    "CtrlMessage",
-                                    0,
-                                    0,
-                                    0,
-                                    win32con.CW_USEDEFAULT,
-                                    win32con.CW_USEDEFAULT,
-                                    0,
-                                    0,
-                                    hinst,
-                                    None )
+# try:
+myWindow = win32gui.RegisterClass( wndclass )
+hwnd = win32gui.CreateWindowEx( win32con.WS_EX_LEFT,
+                                myWindow,
+                                "CtrlMessage",
+                                0,
+                                0,
+                                0,
+                                win32con.CW_USEDEFAULT,
+                                win32con.CW_USEDEFAULT,
+                                0,
+                                0,
+                                hinst,
+                                None )
 
-except Exception as e:
-    log_info( "Exception: %s" % str( e ) )
+# except Exception as e:
+#     log_info( "Exception: %s" % str( e ) )
+#
+#  if hwnd is None:
+#      log_info( "No hwnd detected!" )
+#  else:
+#      log_info( "hwnd: %s" % hwnd )
 
-if hwnd is None:
-    log_info( "No hwnd detected!" )
-else:
-    log_info( "hwnd: %s" % hwnd )
-
-    while True:
-        win32gui.PumpWaitingMessages()
-        time.sleep( 1 )
-        import replicator
-        import logger
-        
+while True:
+    win32gui.PumpWaitingMessages()
+    time.sleep( 1 )
