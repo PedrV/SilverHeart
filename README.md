@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="232" height="233" src="http://g.recordit.co/j7YqWC7u99.gif">
+</p>
+
 # SilverHeart
 A software fully developed in [Python 3.7.3](https://www.python.org/), *SilverHeart* is a keylogger concept, that can be deployed in Windows, Mac OS and Linux distributions.
 
