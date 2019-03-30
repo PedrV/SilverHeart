@@ -7,17 +7,33 @@ A software fully developed in [Python 3.7.3](https://www.python.org/), *SilverHe
 # About SilverHeart
 
 
+# Readme Guide
+
++ [The Process of Creation](https://github.com/PedrV/SilverHeart#the-process-of-creation)
++ [Installation](https://github.com/PedrV/SilverHeart#installation)
++ [Dependencies](https://github.com/PedrV/SilverHeart#dependencies)
++ [Getting Started](https://github.com/PedrV/SilverHeart#getting-started)
++ [FAQ](https://github.com/PedrV/SilverHeart#faq)
++ [Version and Updates](https://github.com/PedrV/SilverHeart#version-and-updates)
++ [License](https://github.com/PedrV/SilverHeart#license)
+
+## The Process of Creation
 
 ![*Code*](http://g.recordit.co/R34fSRlNSY.gif)
 
+## Installation
 
-
-
-# Dependencies
+## Dependencies
 - [Pywin32](https://pypi.org/project/pywin32/)
 - [pynput](https://pypi.org/project/pynput/)
 
-# Getting Started
-
+## Getting Started
 
 ![*Building*](https://i.gifer.com/3jnq.gif)
+
+
+## FAQ
+
+## Version and Updates
+
+## Licence
