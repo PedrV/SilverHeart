@@ -5,7 +5,8 @@ A software fully developed in [Python 3.7.3](https://www.python.org/), *SilverHe
 [![HitCount](http://hits.dwyl.io/PedrV/SilverHeart.svg)](http://hits.dwyl.io/PedrV/SilverHeart)
 
 # About SilverHeart
-
+SilverHeart is a program that when opened will create a decoy file and copy himself to a secure location where it will be alocated. Then it will take the necessery procedures to run on startup and be activelly looking and registrying keystrokes.
+When the computer is about to shutdown SilverHeart will ensure the despatch of the log file via email.
 
 # Readme Guide
 
@@ -18,6 +19,8 @@ A software fully developed in [Python 3.7.3](https://www.python.org/), *SilverHe
 + [License](https://github.com/PedrV/SilverHeart#license)
 
 ## The Process of Creation
+It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
+And so was born the SilverHeart program. After some work the open source keylogger is ready to be released in is the Alpha Version.
 
 ![*Code*](http://g.recordit.co/R34fSRlNSY.gif)
 
