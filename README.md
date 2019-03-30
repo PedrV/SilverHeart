@@ -20,7 +20,7 @@ When the computer is about to shutdown SilverHeart will ensure the despatch of t
 
 ## The Process of Creation
 It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
-And so was born the SilverHeart program. After some work the open source keylogger is ready to be released in is the Alpha Version.
+And so was born the SilverHeart program. After some work *(20 hours of work,  distribuited by 10 days, and many documentation reading)* the open source keylogger is ready to be released in is the Alpha Version.
 
 ![*Code*](http://g.recordit.co/R34fSRlNSY.gif)
 
