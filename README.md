@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="232" height="233" src="http://g.recordit.co/j7YqWC7u99.gif">
+  <img width="220" height="220" src="http://g.recordit.co/j7YqWC7u99.gif">
 </p>
 
 # SilverHeart
