@@ -68,7 +68,7 @@ def cleaner(name, pathC):
                     except Exception as e:
                         print( '[!] Exception: %s' % str( e ) )
 
-                # os.remove(pathF)
+               os.remove(pathF)
         except FileNotFoundError:
             print( '[!] File not found.' )
 
