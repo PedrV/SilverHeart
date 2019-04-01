@@ -42,7 +42,7 @@ class emailSender:
             server.sendmail( user, to, Text )
             server.quit()
 
-        # Email Sent
+        # Never gets printed
         except smtplib.SMTPConnectError:
             print( "Error Connection" )
         except smtplib.SMTPServerDisconnected:
