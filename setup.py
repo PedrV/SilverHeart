@@ -12,7 +12,7 @@ setup(
         description='Keylogger developed in python',
         long_description=long_description,
         url='https://github.com/PedrV/SilverHeart',
-        packages=['Windows', 'OS X_Linux'],
+        packages=['Windows', 'macOS _ Linux'],
         python_requires='>=3.7',
         install_requires=[
             'pynput>=1.4.2',
