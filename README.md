@@ -15,17 +15,13 @@ When the computer is about to shutdown SilverHeart will ensure the despatch of t
 
 # Readme Guide
 
-+ [The Process of Creation](https://github.com/PedrV/SilverHeart#the-process-of-creation)
 + [Installation](https://github.com/PedrV/SilverHeart#installation)
 + [Dependencies](https://github.com/PedrV/SilverHeart#dependencies)
 + [Getting Started](https://github.com/PedrV/SilverHeart#getting-started)
++ [The Process of Creation](https://github.com/PedrV/SilverHeart#the-process-of-creation)
 + [FAQ](https://github.com/PedrV/SilverHeart#faq)
 + [Version and Updates](https://github.com/PedrV/SilverHeart#version-and-updates)
 + [License](https://github.com/PedrV/SilverHeart#license)
-
-## The Process of Creation
-It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
-And so was born the SilverHeart program. After some work *(20 hours of work,  distribuited by 10 days, and many documentation reading)* the open source keylogger is ready to be released in the Alpha Version.
 
 ## Installation
 Clone the repository:
@@ -51,7 +47,7 @@ After the installation of *SilverHeart*, this is a quick guide to how it is actu
 ___
 - The `replicator.py`:
 
-This script is the one who is encharge of once the program is opened, it will create a *"decoy file"* and open that decoy file. Then it will replicate the original program to a safe place, creating a registry key for the program to run on startup.
+This script is the one who is in charge of once the program is opened, it will create a *"decoy file"* and open that decoy file. Then it will replicate the original program to a safe place, creating a registry key for the program to run on startup.
 Togheter with that, it will create a *"variable"* (file) so that it knows how to behave.
 
 ___
@@ -61,8 +57,27 @@ ___
 
 When such message is intercepted this script will trigger the script that will send the logs via email.
 
+___
+- The `sender.py`:
+
+This piece of code will execute only on command of `keeper.py`, it will be responsible for sending the logs via email.
+
+___
+-The `logger.py`:
+
+It is without a shadow of a doubt the main script of the whole program. It records the keystrokes when __pressed__ and __released__ with time stamps.
+
+___
+- The `executer.py`:
+
+It is this script that makes it happen. Connecting the majors scripts and running them simultaneously using the multiprocessing python library. This is the script to be compiled to actually get a functionally copy of *SilverHeart*. 
 
 ![*Building*](https://i.gifer.com/3jnq.gif)
+
+
+## The Process of Creation
+It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
+And so was born the SilverHeart program. After some work *(20 hours of work,  distribuited by 10 days, and many documentation reading)* the open source keylogger is ready to be released in the Alpha Version.
 
 
 ## FAQ
