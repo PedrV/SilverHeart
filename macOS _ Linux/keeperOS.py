@@ -9,9 +9,12 @@ def keeperOS():
     def signal_catcher(signal, frame):
         global stop
         stop = True
+        import senderOS
         # Never gets printed
         print( "Signal Incoming..." )
         print( "Signal Caught: %s" % str( signal ) )
+
+import replicatorOS
 
     # Never gets printed
     while stop != True:
