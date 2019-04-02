@@ -22,7 +22,7 @@ class emailSender:
 
             msg.attach( MIMEText( body, "plain" ) )
             filename = "Filename.txt"
-            attachment = open( 'C:\\Users\\User\\Documents\\Filename.log',
+            attachment = open( '\\usr\\local\\Filename.log',
                                "rb" )  # To be defined on Mac / Linux version
 
             part = MIMEBase( "application", "octet-stream" )
@@ -41,13 +41,14 @@ class emailSender:
             Text = msg.as_string()
             server.sendmail( user, to, Text )
             server.quit()
-
+            
+        # Never gets printed
         except smtplib.SMTPConnectError:
             print( "Error Connection" )
         except smtplib.SMTPServerDisconnected:
             print( 'Server refused' )
         else:
-            print( "Job done" )
+            print( "Email sent" )
 
 
 emailSender.Email()
