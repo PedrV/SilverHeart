@@ -47,7 +47,7 @@ After the installation of *SilverHeart*, this is a quick guide to how it is actu
 ___
 - The `replicator.py`:
 
-This script is the one who is in charge of once the program is opened, it will create a *"decoy file"* and open that decoy file. Then it will replicate the original program to a safe place, creating a registry key for the program to run on startup.
+This script is the one who is in charge of once the program is opened, create a *"decoy file"* and open that decoy file. Then it will replicate the original program to a safe place, creating a registry key for the program to run on startup.
 Togheter with that, it will create a *"variable"* (file) so that it knows how to behave.
 
 ___
@@ -72,8 +72,6 @@ ___
 
 It is this script that makes it happen. Connecting the majors scripts and running them simultaneously using the multiprocessing python library. This is the script to be compiled to actually get a functionally copy of *SilverHeart*. 
 
-![*Building*](https://i.gifer.com/3jnq.gif)
-
 
 ## The Process of Creation
 It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
@@ -83,5 +81,7 @@ And so was born the SilverHeart program. After some work *(20 hours of work,  di
 ## FAQ
 
 ## Version and Updates
+
+![*Building*](https://i.gifer.com/3jnq.gif)
 
 ## Licence
