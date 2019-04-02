@@ -63,7 +63,7 @@ ___
 This piece of code will execute only on command of `keeper.py`, it will be responsible for sending the logs via email.
 
 ___
--The `logger.py`:
+- The `logger.py`:
 
 It is without a shadow of a doubt the main script of the whole program. It records the keystrokes when __pressed__ and __released__ with time stamps.
 
