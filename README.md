@@ -93,11 +93,46 @@ ___
 
 ## FAQ
 
+- **Can I contribute *SilverHeart* ?**
+
+Absolutely. Yes you can, contributions are always welcome, modifying or altering the source code is absolutely ok, as long as you follow the license guidelines.
+
+___
+
+- **Is this program spyware ?**
+
+No. This is a keylogger. This is a common misunderstanding, spyware is a category of programs (most times malware, or “malicious software,” - is an umbrella term that refers to any malicious program or code that is harmful to systems) such as:
+
+1. Trojans - typically malicious software programs that are disguised as legitimate programs. Trojans can delete files, encrypt files for ransom or allow others to have access to the user’s information.
+
+2. Adware - often bundled in with free software, shareware programs and utilities downloaded from the internet. Cookies that track and record users' personal information and internet browsing habits are one of the most common types of adware.
+
+3. Keyloggers - Keyloggers are a type of system monitor that are often used by cybercriminals to steal personally identifiable information, login credentials and sensitive enterprise data. Keyloggers may also be used by employers to observe employees' computer activities, parents to supervise their children's internet usage.
+
+
+*- So, are keyloggers a program that can be spyware?*
+
+Exactly, keyloggers either software or hardware can be classified as spyware when deployed. Under the right circunstances a keylogger is not classifed as spyware if deployed with the *"victim's consent.
+
+___
+
+- **Is keylogger deployment legal ?**
+
+Yes, keylogger deployment is legal, **ONLY** with the *victim's"* consent. Deploying a keylogger without the other user consent is **HIGHLY** illegal. 
+
+What many spyware producers argue is that, when someone clicks consent to the license agreement they are consenting to spyware of any kind. Hence, the sypware does not exit on people's computers without their consent, wheter tey read the license agreement or not, and it is therefore not violating any laws.
+
+
+- [Further Reading](https://searchsecurity.techtarget.com/definition/spyware)
+
+- [Further Reading](https://www.spamlaws.com/what-is-spyware.html)
+
+
 ## Version and Updates
 
 ![*Building*](https://i.gifer.com/3jnq.gif)
 
-## Licence
+## License
 
 - [GNUv3](https://opensource.org/licenses/GPL-3.0)
 - Copyright 2019 © Pedro Vieira
