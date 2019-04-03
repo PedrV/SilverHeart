@@ -8,7 +8,7 @@ setup(
         version=1.0,
         author='Pedro Vieira',
         author_email='pedrovieira3333@protonmail.com',
-        license='GPLv3+',
+        license='GPLv3',
         description='Keylogger developed in python',
         long_description=long_description,
         url='https://github.com/PedrV/SilverHeart',
