@@ -85,3 +85,6 @@ And so was born the SilverHeart program. After some work *(20 hours of work,  di
 ![*Building*](https://i.gifer.com/3jnq.gif)
 
 ## Licence
+
+- [GNUv3](https://opensource.org/licenses/GPL-3.0)
+- Copyright 2019 © Pedro Vieira
