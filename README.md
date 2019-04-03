@@ -77,6 +77,19 @@ It is this script that makes it happen. Connecting the majors scripts and runnin
 It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
 And so was born the SilverHeart program. After some work *(20 hours of work,  distribuited by 10 days, and many documentation reading)* the open source keylogger is ready to be released in the Alpha Version.
 
+- ##### The first flowchart of the project:
+
+![Flowchart](http://g.recordit.co/QSxROXwIQ8.gif)
+
+
+___
+
+- ##### Adding registry key to registry:
+
+<p align="left">
+  <img width="700" height="300" src="http://g.recordit.co/6zVjrlzIu9.gif">
+</p>
+
 
 ## FAQ
 
