@@ -6,8 +6,8 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - keeper.py
-  - logger.py
-  - replicator.py
-  - sender.py
-  - executer.py
+  - python keeper.py
+  - python logger.py
+  - python replicator.py
+  - python sender.py
+  - python executer.py
