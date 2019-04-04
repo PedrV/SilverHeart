@@ -4,7 +4,7 @@
 </p>
 
 # SilverHeart
-A software fully developed in [Python 3.7](https://www.python.org/), *SilverHeart* is a keylogger concept, that can be deployed in Windows, Mac OS and Linux distributions.
+A software fully developed in [Python 3.7](https://www.python.org/), *SilverHeart* is a keylogger concept, that can be deployed in Windows. *(Mac OS and Linux distributions support will be added soon)*.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)     [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PedrV/SilverHeart/issues)
 [![HitCount](http://hits.dwyl.io/PedrV/SilverHeart.svg)](http://hits.dwyl.io/PedrV/SilverHeart)
@@ -156,7 +156,7 @@ This section is used for maintain a Version catalog, as whell as displaying info
 | Version 1.0 | Released content|
 | ------------- | ------------- |
 | Windows  | Standard version* fully functional fully tested |
-| macOS\Linux  | Standard version* fully function not fully tested  |
+| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed</sub> |
 
 <sub><sup>Standard version:  
 Program that when opened will create a decoy file and copy himself to a secure location.
@@ -168,8 +168,9 @@ Logs keystrokes and sends the log file via email when the computer is shuting do
 Estimated release schedule:
 *14/04/2019*
 
-1. Add screen capture feature.
-2. Add more options for sending information.
+1. MacOS and Linux version released
+2. Add screen capture feature.
+3. Add more options for sending information.
 
 ![*Building*](https://i.gifer.com/3jnq.gif)
 
