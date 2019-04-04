@@ -6,7 +6,9 @@
 # SilverHeart
 A software fully developed in [Python 3.7](https://www.python.org/), *SilverHeart* is a keylogger concept, that can be deployed in Windows. *(Mac OS and Linux distributions support will be added soon)*.
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)     [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PedrV/SilverHeart/issues)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Known Vulnerabilities](https://snyk.io/test/github/PedrV/SilverHeart/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/PedrV/SilverHeart?targetFile=requirements.txt)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PedrV/SilverHeart/issues)
 [![HitCount](http://hits.dwyl.io/PedrV/SilverHeart.svg)](http://hits.dwyl.io/PedrV/SilverHeart)
 
 # About SilverHeart
