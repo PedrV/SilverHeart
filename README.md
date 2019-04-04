@@ -93,7 +93,7 @@ ___
 
 ## FAQ
 
-- **Can I contribute *SilverHeart* ?**
+- **Can I contribute to *SilverHeart* ?**
 
 Absolutely. Yes you can, contributions are always welcome, modifying or altering the source code is absolutely ok, as long as you follow the license guidelines.
 
@@ -101,7 +101,7 @@ ___
 
 - **Is this program spyware ?**
 
-No. This is a keylogger. This is a common misunderstanding, spyware is a category of programs (most times malware, or “malicious software,” - is an umbrella term that refers to any malicious program or code that is harmful to systems) such as:
+No. This is a keylogger. This is a common misunderstanding, spyware is a category of programs (most times malware, or “malicious software,” - an umbrella term that refers to any malicious program or code that is harmful to systems) such as:
 
 1. Trojans - typically malicious software programs that are disguised as legitimate programs. Trojans can delete files, encrypt files for ransom or allow others to have access to the user’s information.
 
@@ -112,27 +112,69 @@ No. This is a keylogger. This is a common misunderstanding, spyware is a categor
 
 *- So, are keyloggers a program that can be spyware?*
 
-Exactly, keyloggers either software or hardware can be classified as spyware when deployed. Under the right circunstances a keylogger is not classifed as spyware if deployed with the *"victim's consent.
+Exactly, keyloggers either software or hardware can be classified as spyware when deployed without 3rd part agreement. Under the right circunstances a keylogger is not classifed as spyware if deployed with the *"victim's"* consent.
 
 ___
 
 - **Is keylogger deployment legal ?**
 
-Yes, keylogger deployment is legal, **ONLY** with the *victim's"* consent. Deploying a keylogger without the other user consent is **HIGHLY** illegal. 
+Yes, keylogger deployment is legal, **ONLY** with the *"victim's"* consent. Deploying a keylogger without the other user consent is **HIGHLY** illegal. 
 
-What many spyware producers argue is that, when someone clicks consent to the license agreement they are consenting to spyware of any kind. Hence, the sypware does not exit on people's computers without their consent, wheter tey read the license agreement or not, and it is therefore not violating any laws.
+What many spyware producers argue is that, when someone clicks Consent to the license agreement they are consenting to spyware of any kind. Hence, the sypware does not exit on people's computers without their consent, wheter they read the license agreement or not, and it is therefore not violating any laws.
 
 
-- [Further Reading](https://searchsecurity.techtarget.com/definition/spyware)
+###### [Further Reading](https://searchsecurity.techtarget.com/definition/spyware) of [legal implications](https://www.spamlaws.com/what-is-spyware.html).
+ 
+ ___
+ 
+- **Can I use *SilverHeart* to supervise someone ?**
 
-- [Further Reading](https://www.spamlaws.com/what-is-spyware.html)
+What you do with this program is 100% all up to you and it is of **YOUR** responsibility. As said before deploying keyloggers without the other part consent is illegal. I as a developer and as a person strongly recommend you to not use this program for 3rd party supervision.
 
+**As a developer this code was made ONLY with learning purpose and is being released with the purpose of share and improvement.**
+
+**With that said I CAN'T AND WIll NOT take any responsiblity with what others do with this code.**
+
+For more informations regarding warranty or liability consulte Section 15, 16 & 17 of the applied [license](https://github.com/PedrV/SilverHeart#license).
+
+___
+
+- **Will *SilverHeart* get updates ?**
+
+If all goes according to plan, I look for maintain this program and update it.
+See [Version and Updates](https://github.com/PedrV/SilverHeart#versions-and-updates) for details.
+
+___
 
 ## Version and Updates
+
+This section is used for maintain a Version catalog, as whell as displaying information for updates and changelogs.
+
+- Versions
+
+ ##### Alpha:
+| Version 1.0 | Released content|
+| ------------- | ------------- |
+| Windows  | Standard version* fully functional fully tested |
+| macOS\Linux  | Standard version* fully function not fully tested  |
+
+<sub><sup>Standard version:  
+Program that when opened will create a decoy file and copy himself to a secure location.
+Runs on startup.
+Logs keystrokes and sends the log file via email when the computer is shuting down.</sup></sub>
+
+- Updates
+
+Estimated release schedule:
+*14/04/2019*
+
+1. Add screen capture feature.
+2. Add more options for sending information.
 
 ![*Building*](https://i.gifer.com/3jnq.gif)
 
 ## License
 
 - [GNUv3](https://opensource.org/licenses/GPL-3.0)
+
 - Copyright 2019 © Pedro Vieira
