@@ -75,7 +75,7 @@ It is this script that makes it happen. Connecting the majors scripts and runnin
 
 ## The Process of Creation
 It all started with simple challenge, *build a keylogger from scratch*. Since I was looking for a way to test my python skills I accepted the challenge.
-And so was born the SilverHeart program. After some work *(20 hours of work,  distribuited by 10 days, and many documentation reading)* the open source keylogger is ready to be released in the Alpha Version.
+And so was born the SilverHeart program. After some work *(24 hours of work,  distribuited by 11 days, and many documentation reading)* the open source keylogger is ready to be released in the Alpha Version.
 
 - ##### The first flowchart of the project:
 
@@ -101,7 +101,7 @@ ___
 
 - **Is this program spyware ?**
 
-No. This is a keylogger. This is a common misunderstanding, spyware is a category of programs (most times malware, or “malicious software,” - an umbrella term that refers to any malicious program or code that is harmful to systems) such as:
+No. This is a keylogger. This is a common misunderstanding, spyware is a category of programs (most times malware, or "malicious software," - an umbrella term that refers to any malicious program or code that is harmful to systems) such as:
 
 1. Trojans - typically malicious software programs that are disguised as legitimate programs. Trojans can delete files, encrypt files for ransom or allow others to have access to the user’s information.
 
@@ -156,7 +156,7 @@ This section is used for maintain a Version catalog, as whell as displaying info
 | Version 1.0 | Released content|
 | ------------- | ------------- |
 | Windows  | Standard version* fully functional fully tested |
-| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed</sub> |
+| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
 
 <sub><sup>Standard version:  
 Program that when opened will create a decoy file and copy himself to a secure location.
