@@ -5,16 +5,6 @@ import win32con
 import win32gui
 
 
-# ------------------------------------ #
-# Final version no control logs necessary, used to test the script
-# def log_info(msg):
-#     print( msg )
-#     f = open( 'C:\\Users\\User\\Documents\\Filename.log', "a" )
-#     f.write( msg + "\n" )
-#     f.close()
-# ----------------------------------- #
-
-
 # Reads the messages from the message map and prints
 def wndproc(hwnd, msg, wparam, lparam):
     log_info( '%s' % msg )
@@ -25,15 +15,6 @@ def wndproc(hwnd, msg, wparam, lparam):
     else:
         pass
 
-
-# ---------------------------------- #
-
-#   Test class
-#   Used to create and test how to grab windows messages
-#   Test "virtually posted" and "real queue" messages
-#   https://devblogs.microsoft.com/oldnewthing/?p=33453
-
-# ----------------------------------- #
 
 # Creates invisible console that detects commands
 
@@ -64,15 +45,6 @@ hwnd = win32gui.CreateWindowEx( win32con.WS_EX_LEFT,
                                 0,
                                 hinst,
                                 None )
-# Used to test the script
-# except Exception as e:
-#     log_info( "Exception: %s" % str( e ) )
-#
-#  if hwnd is None:
-#      log_info( "No hwnd detected!" )
-#  else:
-#      log_info( "hwnd: %s" % hwnd )
-
 while True:
     win32gui.PumpWaitingMessages()
     time.sleep( 1 )
