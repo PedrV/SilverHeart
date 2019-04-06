@@ -159,6 +159,14 @@ This section is used to maintain a Version catalog, as well as displaying inform
 | Windows  | Standard version* fully functional fully tested |
 | macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
 
+
+| Version 1.01 | Released content|
+| --- | --- |
+| Windows  | Added multi disk search, fixed directory problem when copying file|
+| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
+
+*Changelog available soon!*
+
 <sub><sup>Standard version:  
 Program that when opened will create a decoy file and copy himself to a secure location.
 Runs on startup.
@@ -173,7 +181,7 @@ Estimated release schedule:
 2. Add screen capture feature.
 3. Add more options for sending information.
 
-![*Building*](https://i.gifer.com/3jnq.gif)
+![WIP](https://media.giphy.com/media/3o7btQ0NH6Kl8CxCfK/giphy.gif)
 
 ## License
 
