@@ -165,7 +165,13 @@ This section is used to maintain a Version catalog, as well as displaying inform
 | Windows  | Added multi disk search, fixed directory problem when copying file|
 | macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
 
-*Changelog available soon!*
+
+| Version 1.1 | Released content|
+| --- | --- |
+| Windows  | Stardard Version* tested, performance enhanced, additional features listed on Update 1.1.0|
+| macOS\Linux  | **On hold** |
+
+*Changelog available!*
 
 <sub><sup>Standard version:  
 Program that when opened will create a decoy file and copy himself to a secure location.
@@ -174,12 +180,31 @@ Logs keystrokes and sends the log file via email when the OS is shuting down.</s
 
 - Updates
 
-Estimated release schedule:
-*14/04/2019*
+##### v1.1.0
+Estimated release date:
+*~~14/04/2019~~*
+- [x] Release
+- [ ] Not Released
 
 1. MacOS and Linux version released
 2. Add screen capture feature.
 3. Add more options for sending information.
+___
+
+##### v1.2.0
+Estimated release date:
+*to define*
+
+1. Apprehension of cookies and history.
+2. Acquire files mode.
+___
+
+Android Version:
+##### v0.1.0
+Estimated release date:
+*21/04/2019*
+
+1. Structure for basic logging functions on mobile.
 
 ![WIP](https://media.giphy.com/media/3o7btQ0NH6Kl8CxCfK/giphy.gif)
 
