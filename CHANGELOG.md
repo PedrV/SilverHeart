@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Detect text Ctrl-V actions and logs them to the file.
+- Detect Ctrl-V actions with text on clipboard and logs them to the file.
 - Screenshot function.
   - Screenshot is taked every time "enter" is pressed.
 - Option to send logs via FTP.
@@ -20,8 +20,8 @@ All notable changes to this project will be documented in this file.
 - `replicator.py`:
   - Sometimes, it crashes after 2 disk search implementation. 
   - It Crashes when executable is present in 2 disks at the same time.
-  - Script not replicating proprely when started first time.
   - Opens decoy file when executable is present in 2 disks at the same time.
+  - Script not replicating proprely when started first time.
   - Doesn't proprely clean the executable after replication.
   
  - `executer.py`:
