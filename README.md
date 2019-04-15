@@ -39,6 +39,7 @@ python setup.py install
 ## Dependencies
 - [Pywin32](https://pypi.org/project/pywin32/)
 - [pynput](https://pypi.org/project/pynput/)
+- [Pillow](https://pypi.org/project/Pillow/)
 
 ## Getting Started
 
