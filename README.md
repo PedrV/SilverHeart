@@ -180,6 +180,8 @@ Program that when opened will create a decoy file and copy himself to a secure l
 Runs on startup.
 Logs keystrokes and sends the log file via email when the OS is shuting down.</sup></sub>
 
+___
+
 - Updates
 
 ##### v1.1.0
