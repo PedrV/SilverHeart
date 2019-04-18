@@ -155,11 +155,6 @@ This section is used to maintain a Version catalog, as well as displaying inform
 - Versions
 
  ##### Alpha:
-| Version 1.0 | Released content|
-| ------------- | ------------- |
-| Windows  | Standard version* fully functional fully tested |
-| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
-
 
 | Version 1.01 | Released content|
 | --- | --- |
@@ -170,6 +165,12 @@ This section is used to maintain a Version catalog, as well as displaying inform
 | Version 1.1 | Released content|
 | --- | --- |
 | Windows  | Stardard Version* tested, performance enhanced, additional features listed on Update 1.1.0|
+| macOS\Linux  | **On hold** |
+
+
+| Version 1.1.1 | Released content|
+| --- | --- |
+| Windows  | Stardard Version*, performance enhancements, 1st code cleanup |
 | macOS\Linux  | **On hold** |
 
 *Changelog available!*
@@ -203,7 +204,7 @@ ___
 Android Version:
 ##### v0.1.0
 Estimated release date:
-*21/04/2019*
+*21/07/2019*
 
 1. Structure for basic logging functions on mobile.
 
