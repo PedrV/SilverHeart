@@ -8,6 +8,7 @@ A software fully developed in [Python 3.7](https://www.python.org/), *SilverHear
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Known Vulnerabilities](https://snyk.io/test/github/PedrV/SilverHeart/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/PedrV/SilverHeart?targetFile=requirements.txt)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0a2b9932530614c2d123/maintainability)](https://codeclimate.com/github/PedrV/SilverHeart/maintainability)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PedrV/SilverHeart/issues)
 [![HitCount](http://hits.dwyl.io/PedrV/SilverHeart.svg)](http://hits.dwyl.io/PedrV/SilverHeart)
 
