@@ -202,6 +202,7 @@ Estimated release date:
 
 1. Apprehension of cookies and history.
 2. Acquire files mode.
+3. Add readme log example for better program understanding
 ___
 
 Android Version:
