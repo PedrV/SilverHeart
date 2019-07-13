@@ -15,12 +15,24 @@ setup(
         packages=['Windows'],
         python_requires='>=3.7',
         install_requires=[
-            'requirements.txt'
+            'pynput>=1.4.2',
+            'pywin32==224',
+            'Pillow>=6.0.0',
         ],
         classifiers=[
             'Development Status :: 1 - Alpha',
             'Licence :: OSI Approved :: GPLv3 license',
+            'Intended Audience :: Developers',
+            'Programming Language :: Python',
+            'Programming Language :: Python :: 2',
+            'Programming Language :: Python :: 2.7',
+            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
+            'Programming Language :: Python :: 3.7',
             'Operating System :: Windows',
+            
         ]
 
 )
