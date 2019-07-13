@@ -16,7 +16,6 @@ setup(
         python_requires='>=3.7',
         install_requires=[
             'pynput>=1.4.2',
-            'pywin32==224',
             'Pillow>=6.0.0',
         ],
         classifiers=[
