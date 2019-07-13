@@ -157,12 +157,6 @@ This section is used to maintain a Version catalog, as well as displaying inform
 
  ##### Alpha:
 
-| Version 1.01 | Released content|
-| --- | --- |
-| Windows  | Added multi disk search, fixed directory problem when copying file|
-| macOS\Linux  | Standard version* not fully functional <sub>(run on startup and tests needed)</sub> |
-
-
 | Version 1.1 | Released content|
 | --- | --- |
 | Windows  | Stardard Version* tested, performance enhanced, additional features listed on Update 1.1.0|
@@ -191,9 +185,8 @@ Estimated release date:
 - [x] Release
 - [ ] Not Released
 
-1. MacOS and Linux version released
-2. Add screen capture feature.
-3. Add more options for sending information.
+1. Add screen capture feature.
+2. Add more options for sending information.
 ___
 
 ##### v1.2.0
