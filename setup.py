@@ -12,16 +12,15 @@ setup(
         description='Keylogger developed in python',
         long_description=long_description,
         url='https://github.com/PedrV/SilverHeart',
-        packages=['Windows', 'macOS _ Linux'],
+        packages=['Windows'],
         python_requires='>=3.7',
         install_requires=[
-            'pynput>=1.4.2',
-            'Pywin32>=224',
+            'requirements.txt'
         ],
         classifiers=[
             'Development Status :: 1 - Alpha',
             'Licence :: OSI Approved :: GPLv3 license',
-            'Operating System :: Windows :: macOS', 
+            'Operating System :: Windows, 
         ]
 
 )
