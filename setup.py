@@ -20,7 +20,7 @@ setup(
         classifiers=[
             'Development Status :: 1 - Alpha',
             'Licence :: OSI Approved :: GPLv3 license',
-            'Operating System :: Windows,
+            'Operating System :: Windows
         ]
 
 )
