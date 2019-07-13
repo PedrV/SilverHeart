@@ -11,6 +11,8 @@ A software fully developed in [Python 3.7](https://www.python.org/), *SilverHear
 [![Maintainability](https://api.codeclimate.com/v1/badges/0a2b9932530614c2d123/maintainability)](https://codeclimate.com/github/PedrV/SilverHeart/maintainability)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/PedrV/SilverHeart/issues)
 [![HitCount](http://hits.dwyl.io/PedrV/SilverHeart.svg)](http://hits.dwyl.io/PedrV/SilverHeart)
+[![Build status](https://ci.appveyor.com/api/projects/status/gwb7lr8o90ksj6xd?svg=true)](https://ci.appveyor.com/project/PedrV/silverheart)
+
 
 # About SilverHeart
 *SilverHeart* is a program that when opened will create a decoy file and copy himself to a secure location where it will be alocated. Then it will take the necessery procedures to run on startup and be activelly looking and registrying keystrokes.
