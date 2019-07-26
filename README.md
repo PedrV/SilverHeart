@@ -185,7 +185,6 @@ ___
 Estimated release date:
 *~~14/04/2019~~*
 - [x] Release
-- [ ] Not Released
 
 1. Add screen capture feature.
 2. Add more options for sending information.
@@ -203,7 +202,11 @@ ___
 Android Version:
 ##### v0.1.0
 Estimated release date:
-*21/07/2019*
+*~~21/07/2019~~*
+- [x] Not Released (delayed - unexpected occurrence)
+
+New estimated release date:
+*to define*
 
 1. Structure for basic logging functions on mobile.
 
