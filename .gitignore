@@ -30,3 +30,12 @@ target/
 .venv
 env/
 venv/
+.xml
+.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/SilverHeart.iml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.vscode/settings.json
+.idea/workspace.xml

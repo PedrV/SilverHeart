@@ -5,7 +5,7 @@ with open( 'README.md', 'r' ) as f:
 
 setup(
         name='SilverHeart',
-        version=1.0,
+        version=2.0,
         author='Pedro Vieira',
         author_email='pedrovieira3333@protonmail.com',
         license='GPLv3',
@@ -15,23 +15,22 @@ setup(
         packages=['Windows'],
         python_requires='>=3.7',
         install_requires=[
-            'pynput>=1.4.2',
-            'Pillow>=6.0.0',
+            'pynput>=1.6.8',
+            'Pillow>=7.2.0',
+            'pywin32==228',
         ],
         classifiers=[
-            'Development Status :: 1 - Alpha',
+            'Development Status :: 2 - Beta',
             'Licence :: OSI Approved :: GPLv3 license',
             'Intended Audience :: Developers',
             'Programming Language :: Python',
-            'Programming Language :: Python :: 2',
-            'Programming Language :: Python :: 2.7',
             'Programming Language :: Python :: 3',
             'Programming Language :: Python :: 3.4',
             'Programming Language :: Python :: 3.5',
             'Programming Language :: Python :: 3.6',
             'Programming Language :: Python :: 3.7',
             'Operating System :: Windows',
-            
+            'Operating System :: macOS'
         ]
 
 )

