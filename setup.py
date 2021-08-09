@@ -17,7 +17,7 @@ setup(
         install_requires=[
             'pynput>=1.6.8',
             'Pillow>=7.2.0',
-            'pywin32==228',
+            'pywin32==301',
         ],
         classifiers=[
             'Development Status :: 2 - Beta',
